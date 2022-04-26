@@ -2,18 +2,6 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue';
-
-// const b = { a: 2, c: 2 };
-// const a = b.a;
-let x: { a: 1 } = { a: 1 };
-
-async function xxx() {
-  return new Promise((r) => {
-    setTimeout(() => r(1), 2000);
-  });
-}
-
-void xxx();
 </script>
 
 <template>
