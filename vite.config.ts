@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import legacy from '@vitejs/plugin-legacy';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
 const ASSETS_DIR = 'res';
 const OUT_DIR = 'dist';
@@ -9,6 +10,7 @@ const OUT_DIR = 'dist';
 export default defineConfig({
   plugins: [
     vue(),
+    vueJsx(),
     legacy({
       targets: ['ie >= 11', '> 1%'],
       additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
