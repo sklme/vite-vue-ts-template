@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue';
-import testTSXStyle from './TestTSX.module.less';
+import testTSXStyle from '@/components/TestComp/TestTSX.module.less';
 
 export default defineComponent({
   render: () => (
