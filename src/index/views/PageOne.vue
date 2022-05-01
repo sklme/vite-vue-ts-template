@@ -9,13 +9,12 @@
     从vuex渲染
     <div>{{ testText }}</div>
     <button @click="modifyTest">trigger commit</button>
-    <div>{{ test123 }}</div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { useStore } from 'vuex';
-import { computed, defineComponent, ref } from 'vue';
+import { computed, ref } from 'vue';
 const store = useStore();
 
 const x = ref(0);
@@ -24,23 +23,13 @@ function clickX() {
 }
 
 const testText = computed(() => `xxxx ${store.state.test} xxxx`);
-const modifyTest = () => store.commit('modifyTest');
-</script>
-
-<script lang="ts">
-import _store from '@/store/index';
-
-export default defineComponent({
-  computed: {
-    test123() {
-      return `123${_store.state.test}123`;
-    },
-  },
-});
+const modifyTest = () => {
+  store.commit('modifyTest');
+};
 </script>
 
 <style lang="less" scoped>
 .vuex {
-  background-color: #ddd;
+  background-color: #eee;
 }
 </style>
