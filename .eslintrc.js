@@ -37,6 +37,10 @@ module.exports = {
     'block-scoped-var': 1,
     'class-methods-use-this': 1,
     eqeqeq: 1,
+
+    // vue
+    // 因为不会用native dom写组件， 这个规则没必要
+    'vue/v-on-event-hyphenation': 0,
   },
   overrides: [
     {

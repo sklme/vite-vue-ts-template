@@ -10,9 +10,16 @@
     <div>{{ testText }}</div>
     <button @click="modifyTest">trigger commit</button>
   </div>
+  <div>
+    <TestEvent @testEvent="testEvent" />
+    <div>
+      {{ renderText }}
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
+import TestEvent from '@/components/PageTwo/TestEvent.vue';
 import { useStore } from 'vuex';
 import { computed, ref } from 'vue';
 const store = useStore();
@@ -26,6 +33,15 @@ const testText = computed(() => `xxxx ${store.state.test} xxxx`);
 const modifyTest = () => {
   store.commit('modifyTest');
 };
+
+// 处理子组件的事件
+const childEventText = ref('');
+function testEvent(text: string) {
+  childEventText.value = text;
+}
+const renderText = computed(() => {
+  return childEventText.value ? `收到事件：${childEventText.value}` : '';
+});
 </script>
 
 <style lang="less" scoped>
