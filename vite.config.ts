@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import legacy from '@vitejs/plugin-legacy';
 import vueJsx from '@vitejs/plugin-vue-jsx';
+import WindiCSS from 'vite-plugin-windicss';
 import { join } from 'path';
 
 const ASSETS_DIR = 'res';
@@ -12,6 +13,7 @@ export default defineConfig({
   root: '.',
   plugins: [
     vue(),
+    WindiCSS(),
     vueJsx(),
     legacy({
       targets: ['ie >= 11', '> 1%'],

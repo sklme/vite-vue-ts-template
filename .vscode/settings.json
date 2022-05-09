@@ -11,5 +11,11 @@
   // 指定给path-intellisense插件的路径联想
   "path-intellisense.mappings": {
     "@": "${workspaceFolder}/src"
-  }
+  },
+
+  // windicss支持
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "css.validate": false
 }

@@ -2,6 +2,7 @@ import router from '@/router/router';
 import store from '@/store';
 import { createApp } from 'vue';
 import App from './App.vue';
+import 'virtual:windi.css';
 
 const app = createApp(App);
 

@@ -1,5 +1,5 @@
 <template>
-  <h2>这是第一个页面</h2>
+  <h2 p="t-2 b-1" font="serif">这是第一个页面</h2>
   <p>使用的是sfc编写</p>
   <div>
     <p>第{{ x }}次点击</p>
